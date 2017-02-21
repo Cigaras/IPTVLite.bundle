@@ -1,26 +1,12 @@
-# Copyright © 2013-2017 Valdas Vaitiekaitis
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# Version 1.0.0
-
-TITLE = 'IPTVLite'
+NAME = 'IPTVLite'
 PREFIX = '/video/iptvlite'
 
 ####################################################################################################
 def Start():
-    ObjectContainer.title1 = TITLE
+    ObjectContainer.title1 = NAME
 
 ####################################################################################################
-@handler(PREFIX, TITLE)
+@handler(PREFIX, NAME)
 def MainMenu():
     oc = ObjectContainer()
     playlist = Resource.Load('playlist.m3u', binary = True)
