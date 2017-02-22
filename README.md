@@ -1,4 +1,4 @@
-## Simplified version of Plex plug-in that plays live streams (a.k.a. IPTV) from a M3U playlist ##
+## Simplified version of Plex plug-in that plays live streams (like IPTV) from a M3U playlist ##
 [![Current Release](https://img.shields.io/github/release/Cigaras/IPTVLite.bundle.svg "Current Release")](https://github.com/Cigaras/IPTV.bundle/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Cigaras/IPTVLite.bundle/total.svg "Downloads")](https://github.com/Cigaras/IPTV.bundle/releases) [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Cigaras%40gmail%2ecom&lc=LT&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
