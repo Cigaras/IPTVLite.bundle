@@ -61,7 +61,7 @@ def CreateVideoClipObject(url, title, include_container = False, **kwargs):
             MediaObject(
                 parts = [
                     PartObject(
-                        key = Callback(PlayVideo, url = url)
+                        key = HTTPLiveStreamURL(Callback(PlayVideo, url = url))
                     )
                 ],
             )
@@ -73,7 +73,7 @@ def CreateVideoClipObject(url, title, include_container = False, **kwargs):
         return vco
 
 ####################################################################################################
-@route(PREFIX + '/playvideo')
 @indirect
+@route(PREFIX + '/playvideo.m3u8')
 def PlayVideo(url):
 	return IndirectResponse(VideoClipObject, key = url)
