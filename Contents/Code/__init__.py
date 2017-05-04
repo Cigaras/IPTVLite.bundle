@@ -12,39 +12,44 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
-# Version 1.0.0
+# Version 1.0.1
 
 NAME = 'IPTVLite'
-PREFIX = '/video/iptvlite'
+PREFIX = '/video/' + NAME.lower()
 
 ####################################################################################################
 def Start():
+
     ObjectContainer.title1 = NAME
 
 ####################################################################################################
 @handler(PREFIX, NAME)
 def MainMenu():
+
     oc = ObjectContainer()
     playlist = Resource.Load('playlist.m3u', binary = True)
     if playlist:
         lines = playlist.splitlines()
-        for i in range(len(lines) - 1):
-            line = lines[i].strip()
-            if line.startswith('#EXTINF'):
-                url = lines[i + 1].strip()
-                if url.startswith('#EXTVLCOPT') and i + 1 < len(lines):
-                    # skip VLC specific run-time options
-                    i = i + 1
-                    url = lines[i + 1].strip()
-                if url and not url.startswith('#'):
-                    title = line[line.rfind(',') + 1:len(line)].strip()
+        line_count = len(lines)
+        for i in range(line_count - 1):
+            line_1 = lines[i].strip()
+            if line_1.startswith('#EXTINF'):
+                title = unicode(line_1[line_1.rfind(',') + 1:len(line_1)].strip())
+                url = None
+                for j in range(i + 1, line_count):
+                    line_2 = lines[j].strip()
+                    if line_2:
+                        if not line_2.startswith('#'):
+                            url = line_2
+                            i = j + 1
+                            break
+                if url:
                     oc.add(
                         CreateVideoClipObject(
                             url = url,
                             title = title
                         )
                     )
-                    i = i + 1 # skip the url line for the next cycle
     if len(oc) > 0:
         return oc
     else:
@@ -53,6 +58,7 @@ def MainMenu():
 ####################################################################################################
 @route(PREFIX + '/createvideoclipobject', include_container = bool)
 def CreateVideoClipObject(url, title, include_container = False, **kwargs):
+
     vco = VideoClipObject(
         key = Callback(CreateVideoClipObject, url = url, title = title, include_container = True),
         rating_key = url,
@@ -76,4 +82,5 @@ def CreateVideoClipObject(url, title, include_container = False, **kwargs):
 @indirect
 @route(PREFIX + '/playvideo.m3u8')
 def PlayVideo(url):
+
 	return IndirectResponse(VideoClipObject, key = url)
