@@ -1,5 +1,5 @@
 ## Simplified version of Plex plug-in that plays live streams (like IPTV) from a M3U playlist ##
-[![PayPal](https://img.shields.io/badge/donate-PayPal-green.svg)](https://paypal.me/valdasvaitiekaitis) [![BitCoin](https://img.shields.io/badge/donate-BitCoin-green.svg)](http://valdas.ax.lt/bitcoin)
+[![PayPal](https://img.shields.io/badge/donate-PayPal-green.svg)](https://paypal.me/valdasvaitiekaitis) [![BitCoin](https://img.shields.io/badge/donate-BitCoin-green.svg)](https://valdasv.lt/bitcoin)
 
 ### Introduction ###
 Simplified version of [IPTV.bundle](https://github.com/Cigaras/IPTV.bundle) for testing purposes mostly.
@@ -7,10 +7,10 @@ Simplified version of [IPTV.bundle](https://github.com/Cigaras/IPTV.bundle) for 
 No configuration available, to use custom playlist replace file `playlist.m3u` in Resources folder.
 
 ### Credits and contacts ###
-* Author: [Valdas Vaitiekaitis](http://valdas.ax.lt), also known as [Cigaras](http://forums.plex.tv/profile/Cigaras);
+* Author: [Valdas Vaitiekaitis](https://valdasv.lt), also known as [Cigaras](http://forums.plex.tv/profile/Cigaras);
 * Icon by me, using [Font Awesome](http://fontawesome.io) by Dave Gandy, licensed under [SIL OFL 1.1](http://scripts.sil.org/OFL),
 
-If You have any questions or suggestions, please feel free to contact me via [GitHub](https://github.com/Cigaras) or [Plex forum](https://forums.plex.tv/discussion/83083), or visit my personal blog at [valdasv.blogspot.lt](http://valdasv.blogspot.lt), but please keep in mind that I did this plug-in voluntary in my spare time and I have other priorities to do so do not expect a quick response. However if You find my work useful, please consider making a small [donation](https://paypal.me/valdasvaitiekaitis) as a sign of gratitude and support. Also accepting [bitcoins](http://valdas.ax.lt/bitcoin).
+If You have any questions or suggestions, please feel free to contact me via [GitHub](https://github.com/Cigaras) or [Plex forum](https://forums.plex.tv/discussion/83083), or visit my personal blog at [valdasv.blogspot.lt](http://valdasv.blogspot.lt), but please keep in mind that I did this plug-in voluntary in my spare time and I have other priorities to do so do not expect a quick response. However if You find my work useful, please consider making a small [donation](https://paypal.me/valdasvaitiekaitis) as a sign of gratitude and support. Also accepting [bitcoins](http://valdasv.lt/bitcoin).
 
 ### License ###
 Copyright © 2013-2017 Valdas Vaitiekaitis
